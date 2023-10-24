@@ -1,0 +1,59 @@
+.square{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: hsl(30, 73%, 66%);
+    top: calc(50%-250px);
+    left: calc(50%-250px);
+
+}
+
+.circle_right{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background:  hsl(0, 0%, 100%);
+    right: 125px;
+    top: 100px;
+}
+
+.circle_left{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background:  hsl(0, 0%, 100%);
+    right: 325px;
+    top: 100px;
+
+}
+
+.square .circle_right .eye{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #000;
+    right:25px;
+    top: 50px;
+}
+
+.square .circle_left .eye{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #000;
+    right:25px;
+    top: 50px;
+}
+
+.mouth{
+    width: 200px;
+    height: 75px;
+    background: white;
+    position: absolute;
+    bottom: 100px;
+    right: 175px;
+}
