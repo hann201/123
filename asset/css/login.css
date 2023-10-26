@@ -1,0 +1,12 @@
+.login-wrap{
+    --w: 400px;
+    --h: 390px;
+    position: fixed;
+    width: var(--w);
+    height: var(--h);
+    background: #fff;
+    left: calc(50% - (var(--w)));
+    top: calc(50% - (var(--h)));
+    border-radius: 4px;
+    
+}
