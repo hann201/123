@@ -16,14 +16,10 @@ ul {
 }
 
 .container{
-    max-width: 800px;
+    max-width: 1000px;
     height: 100%;
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
     margin: auto;
-}
-
-.footer{
-    background: rgb(248, 248, 248);
 }

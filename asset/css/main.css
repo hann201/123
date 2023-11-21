@@ -1,0 +1,120 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+img{
+    width: 100%;
+}
+.header{
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid #dbdbdb;
+}
+
+.header-wrap{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.header-logo{
+    border-right: 2px solid #dbdbdb;
+    text-align: center;
+}
+
+.header-logo img{
+    max-width: 80%;
+}
+
+.header-item{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.header-item-content{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-item-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-item-button a{
+    padding: 5px 10px;
+    background-color: #dbdbdb;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.header-item-button a:hover{
+    color: rgb(35, 101, 223);
+}
+
+.product-inf{
+    margin-top: 15px;
+}
+
+.product-inf-wrap{
+    display: flex;  
+}
+
+.product-inf-video{
+    flex: 2;
+}
+
+.product-inf-text{
+    flex: 1;
+}
+
+.product-inf-wrap{
+    gap: 10px;
+    display: flex;
+}
+
+.product-inf-text{
+    gap: 30px;
+}
+
+.product-inf-text .cata ul{
+    font-size: 90%;
+    color: #615d5d;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.product-inf-text .cata ::after{
+    content: "\\";
+    position: absolute;
+    right: 249px;
+}
+
+.product-process{
+    display: flex;
+}
+
+.product-process-percent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #1cb858 ;
+    border-radius: 1000px;
+    font-size: 0.9rem;
+}
+
+.product-process{
+
+}
+.product-process-money{
+    flex: 1;
+}
+
+
