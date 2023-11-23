@@ -97,6 +97,7 @@ img{
 
 .product-process{
     display: flex;
+    
 }
 
 .product-process-percent{
@@ -111,10 +112,62 @@ img{
 }
 
 .product-process{
-
+    display: flex;
+    gap: 10px;
 }
 .product-process-money{
     flex: 1;
+
 }
 
+.product-process-count{
+    display: flex;
+}
 
+.product-process-count-people{
+    display: flex;
+}
+.product-process-count-day{
+    display: flex;
+}
+
+.product-description{
+    font-size: 0.9rem;
+    text-align: justify;
+}
+
+.line{
+    border-color:2px solid #dbdbdb;
+}
+
+.share-icon{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.share-icon .send-message{
+    display: flex;
+    
+}
+
+.share-icon img{
+    max-width: 20px;
+}
+
+.page-block{
+    background-color: #f9fafb;
+    height: 60px;
+}
+
+.page-wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.page-tab{
+    display: flex;
+    
+
+}

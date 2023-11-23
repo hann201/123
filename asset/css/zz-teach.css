@@ -1,0 +1,298 @@
+:root {
+    --header-h: 70px;
+    --header-bg: rgb(255, 255, 255);
+    --header-border-color: #ececec;
+    --second-color: #a8a8a8;
+}
+
+html,
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    height: var(--header-h);
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--header-border-color);
+}
+
+.header-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-logo {
+    border-right: 2px solid var(--header-border-color);
+    text-align: center;
+}
+
+.header-logo img {
+    max-width: 70%;
+}
+
+.header-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.header-menu-item ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-button-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-button-wrap a {
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.menu-button-wrap a:hover,
+.menu-button-wrap a.active {
+    color: rgb(25, 108, 202);
+}
+
+.proudct-information {
+    margin: 20px auto;
+}
+
+.product-information-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.product-information-video {
+    flex: 2;
+}
+
+.product-information-text {
+    flex: 1;
+    padding: 0 30px;
+}
+
+.category-nav {
+    display: flex;
+    gap: 20px;
+    color: var(--second-color);
+    font-size: 0.9rem;
+}
+
+.category-nav li {
+    position: relative;
+}
+
+.category-nav li::after {
+    font-family: 'Material Symbols Outlined';
+    content: "\e5cc";
+    position: absolute;
+    right: -19px;
+    top: 2px;
+}
+
+.category-nav li:last-child::after {
+    display: none;
+}
+
+.author-name {
+    color: rgb(9, 133, 9);
+}
+
+.product-name {
+    font-size: 1.3rem;
+    margin: 20px auto;
+}
+
+.project-process {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.goal-percentage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #09aa17;
+    border-radius: 1000px;
+    font-size: 0.9rem;
+}
+
+.project-goal {
+    font-size: 0.9rem;
+    color: #7a7a7a;
+}
+
+.project-current {
+    font-size: 1.2rem;
+}
+
+.project-count {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.process-info {
+    flex: 1;
+}
+
+.project-count-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-count-item>span:last-child {
+    color: #09aa17;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    line-height: 26px;
+    margin: 15px auto;
+    text-align: justify;
+}
+
+hr.line {
+    border-color: var(--header-border-color);
+}
+
+.project-run-range {
+    margin: 15px auto;
+    color: var(--second-color);
+    font-size: 0.8rem;
+}
+
+.share-item {
+    color: #666666;
+    font-size: 0.8rem;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.send-message {
+    padding: 5px;
+    border: 1px solid var(--second-color);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.share-item .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.share-item img {
+    max-width: 30px;
+}
+
+.copy-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--second-color);
+    border-radius: 999px;
+}
+
+.main-nav-block {
+    background-color: #f9fafb;
+    height: 60px;
+}
+
+.main-nav-wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav-wrap .page-tab {
+    flex: 2;
+}
+
+.page-tab .tabs {
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+
+
+.main-nav-wrap .donate-wrap {
+    flex: 1;
+}
+
+.page-tab .tabs ::after{
+    content: "";
+    position: absolute;
+    background: #09aa17;
+    height: 2px;
+    width: 50px;
+    top: 30px;
+    left: 70px;
+}
+
+.main-nav-wrap .tabs li a::after{
+    content: attr(data-count);
+    color: black;
+    font-size: 0.8rem;
+}
+
+.donate-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.like-btn{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #09aa17;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #09aa17;
+
+}
+
+.donate-btn{
+    flex: 2;
+    width: 200px;
+    height: 40px;
+    background-color:  #09aa17;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.donate-wrap .donate-btn :hover{
+    background-color: #91b88b;
+}
+    
