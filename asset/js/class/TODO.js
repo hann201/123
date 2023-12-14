@@ -4,6 +4,7 @@ class TODO {
     #items
     #el
     #storage
+    // 私有欄位#只能在建立類別class時事先宣告
 
     constructor(el) {
         this.#items = [];

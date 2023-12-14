@@ -1,3 +1,4 @@
+// 登入帳號
 class LocalStorage {
     #uid;
 

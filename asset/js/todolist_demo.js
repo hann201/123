@@ -1,12 +1,14 @@
 import { TODO } from './class/TODO.js';
 import { UID } from './class/UID.js';
+// class 引入
 
 let todoApp = document.querySelector('#todo-app');
 let uidApp = document.querySelector('#uid-app');
 let uid = UID.read();
 
+// 執行UID class
 if (uid) {
-    todoApp.classList.add('active');
+    todoApp.classList.add('active'); // classList增加class
     // TODO Application.
     let elInput = document.querySelector('#todo-in');
     let elAddBtn = document.querySelector('#todo-add-btn');
@@ -21,8 +23,9 @@ if (uid) {
             return; // void
         }
 
-        elInput.value = '';
-        elInput.focus();
+        // elInput.value = '';
+        // elInput.focus();
+        // 這是什麼
 
         todo.add(value);
         todo.render();
@@ -58,4 +61,36 @@ if (uid) {
     })
 }
 
+const doGet = () => {
+    let request = new XMLHttpRequest()
+    // XMLHttpRequest存取伺服器資料
 
+    request.addEventListener('load', () => {
+        console.log('loaded')
+        console.log(request.responseText)
+    })
+
+    request.open('GET', 'https://book.niceinfos.com/frontend/api/?action=sleep')
+    request.send()
+    // 先傳送API，然後再讀取load
+    console.log('doGet run.')
+}
+
+doGet();
+
+const doFetch = () => {
+    let api = 'https://book.niceinfos.com/frontend/api/?action=sleep'
+
+    fetch(api)
+        .then((response) => {
+            return response.text()
+            // return response.json()
+        })
+        .then((data) => {
+            console.log(data)
+        })
+
+    console.log('doFetch run.')
+}
+
+// doFetch();
