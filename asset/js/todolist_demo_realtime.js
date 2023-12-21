@@ -1,6 +1,12 @@
 import { TodoRealtime } from './class/TodoRealtime.js';
-// new in
 import { UID } from './class/UID.js';
+import { App } from './firebase/App.js'
+import { Auth } from './firebase/Auth.js'
+
+const app = await App.init()
+const auth = new Auth(app)
+let user = await auth.register('1@gmail.com', '12345678')
+
 
 let todoApp = document.querySelector('#todo-app');
 let uidApp = document.querySelector('#uid-app');
