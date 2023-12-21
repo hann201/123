@@ -1,18 +1,23 @@
 import { TodoRealtime } from './class/TodoRealtime.js';
-import { UID } from './class/UID.js';
-import { App } from './firebase/App.js'
-import { Auth } from './firebase/Auth.js'
+// import { UID } from './class/UID.js';
+import { App } from './Firebase/App.js';
+import { Auth } from './Firebase/Auth.js';
 
-const app = await App.init()
-const auth = new Auth(app)
-let user = await auth.register('1@gmail.com', '12345678')
-
+const app = await App.init();
+const auth = new Auth(app);
 
 let todoApp = document.querySelector('#todo-app');
 let uidApp = document.querySelector('#uid-app');
-let uid = UID.read();
 
-if (uid) {
+let email = 'kindping@gmail.com'
+let password = '12345678'
+
+// let user = await auth.register(email, password);
+// let user = await auth.signIn(email, password);
+// console.log(user);
+
+const authed = (user) => {
+    let uid = user.uid;
     todoApp.classList.add('active');
     // TODO Application.
     let elInput = document.querySelector('#todo-in');
@@ -46,25 +51,38 @@ if (uid) {
         }
     })
 
-    elChangeUid.addEventListener('click', (e) => {
+    elChangeUid.addEventListener('click', async (e) => {
         e.preventDefault();
-        UID.clear();
+        await auth.signOut()
         location.reload();
     })
 
 
     let elCurentUid = document.querySelector('#current-uid');
     elCurentUid.innerHTML = uid
-} else {
-    uidApp.classList.add('active');
-
-    let elUid = document.querySelector('#todo-uid');
-    let elBtn = document.querySelector('#todo-uid-btn');
-    elBtn.addEventListener('keyup', (e) => {
-        let value = elUid.value;
-        if (value) {
-            UID.write(value);
-            location.reload();
-        }
-    })
 }
+
+const unauthed = () => {
+    uidApp.classList.add('active');
+    let elAccount = document.querySelector('#todo-account');
+    let elPassword = document.querySelector('#todo-password');
+
+    let elSignInBtn = document.querySelector('#todo-signin-btn')
+    elSignInBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        let account = elAccount.value;
+        let password = elPassword.value;
+        console.log(account, password)
+    })
+
+    // let elUid = document.querySelector('#todo-uid');
+    // let elBtn = document.querySelector('#todo-uid-btn');
+    // elBtn.addEventListener('click', (e) => {
+    //     let value = elUid.value;
+    //     if (value) {
+    //         location.reload();
+    //     }
+    // })
+}
+
+auth.onChange(authed, unauthed);
